@@ -9,9 +9,9 @@ import errorHandler from './middlewares/errorHandler';
 
 const app = express();
 
-app.use(helmet());                       
-app.use(cors({ origin: config.origin })); 
-app.use(express.json());                
+app.use(helmet());
+app.use(cors({ origin: config.origin }));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 if (config.env === 'development') {

@@ -1,7 +1,7 @@
 import http from 'http';
 import { Server as SocketIOServer } from 'socket.io';
 
-import app from './index';            
+import app from './index';
 import config from './config/default';
 import socketHandler from './socket/socket';
 
@@ -11,7 +11,7 @@ const io = new SocketIOServer(httpServer, {
   cors: {
     origin: config.origin,
     methods: ['GET', 'POST'],
-  }
+  },
 });
 
 socketHandler(io);
